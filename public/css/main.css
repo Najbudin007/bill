@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo a {
+    margin: auto 0px;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    margin: auto;
+}
+
+.logo p {
+    font-size: 17px;
+    margin: auto 10px;
+}
+
+.logo p span {
+    font-size: 15px;
+}
+
+.sidebar {
+    background-color: #205082;
+    width: 55px;
+    height: 90vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.sidebar ul li:first-child {
+    padding-top: 0px;
+}
+
+.inner-ul li {
+    color: white;
+    background-color: #224369;
+    margin-bottom: 0px !important;
+    border-bottom: 1px solid #36679A;
+    cursor: pointer;
+    padding-left: 40px !important;
+}
+
+.inner-ul li:first-child {
+    background-color: #36679A;
+    padding-left: 10px !important;
+    padding-top: 8px !important;
+
+}
+
+.inner-ul li:hover {
+    background: #36679A !important;
+}
+
+.inner-ul li a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    padding-right: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+}
+
+.inner-ul {
+    position: absolute;
+    left: 53px;
+    display: none;
+    width: 400px;
+}
+
+.sidebar-dropdown-menu {
+    width: 360px;
+}
+
+.sidebar-dropdown-menu li:hover {
+    background-color: #36679A !important;
+}
+
+.sidebar-dropdown-menu li a:hover {
+    background-color: #36679A !important;
+    color: white;
+}
+
+.sidebar-dropdown-menu li a {
+    padding: 0px !important;
+}
+
+.sidebar ul li i {
+    font-size: 25px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.sidebar ul li:hover .inner-ul {
+    display: block;
+}
+
+.navbars {
+    height: 10vh;
+    padding: 5px;
+    background: #224369;
+    /* margin: auto; */
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dropdown-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+}
