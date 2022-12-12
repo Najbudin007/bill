@@ -137,3 +137,52 @@ body {
     border: none;
     color: white;
 }
+
+.form-top {
+    display: flex;
+    justify-content: baseline;
+    background: #224369;
+    padding: 5px;
+    border: 1px solid #224369;
+    border-bottom: none !important;
+}
+
+.form-top span {
+    color: white;
+}
+
+.p-form {
+    width: 100%;
+    min-height: 100%;
+    border: 1px solid #80808045;
+    height: 300px;
+}
+
+.inp {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0d6d6;
+    width: 100%;
+}
+
+.inp label {
+    text-align: center;
+    background-color: #d4e8de;
+    color: #404040;
+}
+
+.inp input {
+    border: none !important;
+    padding-left: 5px;
+}
+
+.required-label {
+    background-color: #f3a2af !important;
+}
+
+.form-title {
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+}
