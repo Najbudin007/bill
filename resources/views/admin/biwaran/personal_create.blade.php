@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-    <div class="w-100 p-form">
+    <div class="p-form">
         <div class="form-top mb-2">
             <span>करदाताको विवरण</span>
             <span>व्यक्तिगत विवरण</span>
@@ -163,7 +163,7 @@
             </p>
             <div class="d-flex">
                 <div class="check-inp mx-5">
-                    <input type="checkbox" name="" id="" class="m-auto">
+                    <input type="checkbox" name="" id="dad" class="m-auto">
                     <label for="nname">बाबु </label>
 
                 </div>
@@ -183,9 +183,227 @@
 
                 </div>
             </div>
+
         </div>
 
-        
+        <div class="px-1">
+            <p class="form-title mt-2">
+                स्थायी ठेगाना
+            </p>
+            <div class="d-flex mt-2">
+                <p class="form-titl mx-1">
+                    साबिक
+                </p>
+                <div class="inp">
+                    <label for="nname">अंचल</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जिल्ला</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">गा.बि.स./न.पा.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">वडा न.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">सडकको नाम</label>
+                    <input type="text" id="nname">
+                </div>
+            </div>
+            <div class="d-flex mt-2">
+                <p class="form-titl mx-1">
+                    हालको
+                </p>
+                <div class="inp">
+                    <label for="nname">प्रदेश</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जिल्ला</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">गा.बि.स./न.पा.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">वडा न.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">टोलको नाम</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">घर नं.</label>
+                    <input type="text" id="nname">
+                </div>
+            </div>
+        </div>
+        <div class="px-1">
+            <p class="form-title mt-2">
+                अस्थायी ठेगाना
+            </p>
+            <div class="d-flex mt-2">
+                <p class="form-titl mx-1">
+                    साबिक
+                </p>
+                <div class="inp">
+                    <label for="nname">अंचल</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जिल्ला</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">गा.बि.स./न.पा.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">वडा न.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">सडकको नाम</label>
+                    <input type="text" id="nname">
+                </div>
+            </div>
+            <div class="d-flex mt-2">
+                <p class="form-titl mx-1">
+                    हालको
+                </p>
+                <div class="inp">
+                    <label for="nname">प्रदेश</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जिल्ला</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">गा.बि.स./न.पा.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">वडा न.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">टोलको नाम</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">घर नं.</label>
+                    <input type="text" id="nname">
+                </div>
+            </div>
+        </div>
+        <div class="px-1">
+            <p class="form-title mt-2">
+                सम्पर्क बिवरण
+            </p>
+            <div class="d-flex mt-2">
 
+                <div class="inp">
+                    <label for="nname">फोन</label>
+                    <input type="number" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">मोवाइल</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">इमेल</label>
+                    <input type="email" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">पत्राचार गर्ने ठेगाना</label>
+                    <input type="text" id="nname">
+                </div>
+
+            </div>
+        </div>
+        <div class="px-1">
+            <p class="form-title mt-2">
+                नागरिकता </p>
+            <div class="d-flex mt-2">
+
+                <div class="inp">
+                    <label for="nname" class="required-label">नागरिकता नं.</label>
+                    <input type="number" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जारी मिती(बि.स)</label>
+                    <input type="date" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जारी मिती(इ.स)</label>
+                    <input type="date" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">जिल्ला</label>
+                    <input type="text" id="nname">
+                </div>
+
+            </div>
+        </div>
+        <div class="px-1">
+            <p class="form-title mt-2">
+                मतदाता </p>
+            <div class="d-flex mt-2">
+
+                <div class="inp">
+                    <label for="nname">परिचय पत्र नं.</label>
+                    <input type="number" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जारी मिती(बि.स)</label>
+                    <input type="date" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जारी मिती(इ.स)</label>
+                    <input type="date" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">जिल्ला</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">स्थायी लेखा नं.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">अन्य बिबरण</label>
+                    <input type="text" id="nname">
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-2 px-1">
+
+            <div class="d-flex mt-2">
+
+                <div class="inp w-50">
+                    <label for="nname">कैफियत</label>
+                    <input type="text" id="nname">
+                </div>
+
+
+            </div>
+        </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        var dad = document.getElementById("dad");
+        console.log(dad.value);
+        console.log("dad.value");
+    </script>
 @endsection
