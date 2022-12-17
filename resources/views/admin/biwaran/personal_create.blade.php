@@ -156,6 +156,7 @@
             </div>
             <div class="col-2">image</div>
         </div>
+
         <div class="mt-3 mb-1">
             <p class="form-title">
                 नातेदारको विवरण
@@ -183,5 +184,8 @@
                 </div>
             </div>
         </div>
+
+        
+
     </div>
 @endsection
