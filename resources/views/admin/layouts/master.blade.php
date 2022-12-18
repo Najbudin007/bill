@@ -37,7 +37,7 @@
                         <i class="ri-line-chart-line"></i>
                         <ul class="inner-ul">
                             <li><a href="#">कर सम्बन्धि विवरण</a></li>
-                            <li><a href="{{ route('personalBivaran') }}">करदाताको विवरण</a></li>
+                            <li><a href="{{ route('personalBivaran.create') }}">करदाताको विवरण</a></li>
                         </ul>
                     </li>
                     <li>
@@ -118,6 +118,9 @@
             @yield('content')
         </div>
     </div>
+    @yield('scripts')
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
 </body>
 
 </html>
