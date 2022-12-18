@@ -32,7 +32,7 @@
     <div class="d-flex below-nav">
         <div class="sidebar">
             <div style="display: block;position: relative;">
-                <ul style="position: fixed">
+                <ul>
                     <li>
                         <i class="ri-line-chart-line"></i>
                         <ul class="inner-ul">
