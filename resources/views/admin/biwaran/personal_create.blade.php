@@ -156,6 +156,7 @@
             </div>
             <div class="col-2">image</div>
         </div>
+
         <div class="mt-3 mb-1">
             <p class="form-title">
                 नातेदारको विवरण
@@ -396,7 +397,6 @@
 
             </div>
         </div>
-        <button class="btn btn-success d-flex mx-auto mt-5">सुरक्षित गर्नुहोस्</button>
     </div>
 @endsection
 
