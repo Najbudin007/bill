@@ -37,7 +37,7 @@
                         <i class="ri-line-chart-line"></i>
                         <ul class="inner-ul">
                             <li><a href="#">कर सम्बन्धि विवरण</a></li>
-                            <li><a href="{{ route('personalBivaran') }}">करदाताको विवरण</a></li>
+                            <li><a href="{{ route('personalBivaran.create') }}">करदाताको विवरण</a></li>
                         </ul>
                     </li>
                     <li>

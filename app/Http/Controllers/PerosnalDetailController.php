@@ -35,7 +35,79 @@ class PerosnalDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'sometimes',
+        ]);
+
+        $data =  new perosnalDetail();
+
+        $data->name = $request->name;
+        $data->middle_name = $request->middle_name;
+        $data->last_name = $request->last_name;
+        $data->Dob_bs = $request->Dob_bs;
+        $data->Dob_ad = $request->Dob_ad;
+        $data->name_eng = $request->name_eng;
+        $data->middle_name_eng = $request->middle_name_eng;
+        $data->last_name_eng = $request->last_name_eng;
+        $data->gender = $request->gender;
+        $data->religion = $request->religion;
+        $data->proffession = $request->proffession;
+        $data->native_language = $request->native_language;
+        $data->country = $request->country;
+        $data->nationality = $request->nationality;
+        $data->weight = $request->weight;
+        $data->file_no = $request->file_no;
+        $data->disability = $request->disability;
+        // Relatives Details
+        $data->dad = $request->dad;
+        $data->mom = $request->mom;
+        $data->grand_father = $request->grand_father;
+        $data->spouse = $request->spouse;
+        // permnanet Address
+        $data->address = $request->address;
+        $data->zone = $request->zone;
+        $data->district = $request->district;
+        $data->vdc_municipality = $request->vdc_municipality;
+        $data->p_ward_no = $request->p_ward_no;
+        $data->roadname = $request->roadname;
+        $data->tolename = $request->tolename;
+        $data->house_no = $request->house_no;
+        $data->tolename = $request->tolename;
+        // temporary Address
+        $data->temp_zone = $request->temp_zone;
+        $data->temp_district = $request->temp_district;
+        $data->temp_vdc_municipality = $request->temp_vdc_municipality;
+        $data->temp_ward_no = $request->temp_ward_no;
+        $data->temp_roadname = $request->temp_roadname;
+        $data->temp_tolename = $request->temp_tolename;
+        $data->temp_house_no = $request->temp_house_no;
+        // contact Details
+        $data->phone = $request->phone;
+        $data->mobile = $request->mobile;
+        $data->email = $request->email;
+        $data->mailing_address = $request->mailing_address;
+        // citizenShip Details
+        $data->citizenship_number = $request->citizenship_number;
+        $data->c_issue_date = $request->c_issue_date;
+        $data->c_district = $request->c_district;
+        // Passport Details
+        $data->passport_number = $request->passport_number;
+        $data->p_issue_date = $request->p_issue_date;
+        $data->p_district = $request->p_district;
+        // voterId Details
+        $data->voter_id_number = $request->voter_id_number;
+        $data->v_issue_date = $request->v_issue_date;
+        $data->v_district = $request->v_district;
+        $data->sthai_lekha_number = $request->sthai_lekha_number;
+         // other Details
+        $data->other_detail = $request->other_detail;
+        $data->description = $request->description;
+
+         return redirect()->back();
+        $data-> save();
+        return redirect()->back();
     }
 
     /**
