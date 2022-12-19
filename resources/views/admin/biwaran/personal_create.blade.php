@@ -143,7 +143,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2">image</div>
+            <div class="col-2">
+                <div class="border img-div" style="overflow: hidden">
+                    <div class="d-flex">
+
+                        <button class="btn py-1 btn-sm border" onclick="removeFile()">X</button>
+                        <input type="file" id="fl" accept="image/*" class="m-auto"
+                            onchange="loadFile(event)">
+                    </div>
+                    <div class="w-100 ">
+
+                        <img id="output" style="height: 150px; width:100%; object-fit:cover" />
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div class="mt-3 mb-1">
@@ -172,8 +186,12 @@
 
                 </div>
             </div>
-
-        </div>
+            <div id="dad-block" class="mt-3 ">
+                <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
+                    <div class="inp">
+                        <label for="nname" class="required-label">बाबुको नाम</label>
+                        <input type="text" id="nname">
+                    </div>
 
         <div class="px-1">
             <p class="form-title mt-2">
@@ -185,7 +203,7 @@
                 </p>
                 <div class="inp">
                     <label for="nname">अंचल</label>
-                    <input type="text" name="zone" id="nname">
+                    <input type="text" id="nname">
                 </div>
                 <div class="inp">
                     <label for="nname">जिल्ला</label>
@@ -206,7 +224,7 @@
             </div>
             <div class="d-flex mt-2">
                 <p class="form-titl mx-1">
-                    अस्थायी ठेगाना
+                    हालको
                 </p>
                 <div class="inp">
                     <label for="nname">प्रदेश</label>
@@ -233,53 +251,86 @@
                     <input type="text" name="temp_house_no" id="nname">
                 </div>
             </div>
+
         </div>
-    
         <div class="px-1">
             <p class="form-title mt-2">
-                सम्पर्क बिवरण
+                अस्थायी ठेगाना
             </p>
             <div class="d-flex mt-2">
 
                 <div class="inp">
-                    <label for="nname">फोन</label>
-                    <input type="number" name="phone" id="nname">
+                    <label for="nname">अंचल</label>
+                    <input type="text" id="nname">
                 </div>
                 <div class="inp">
-                    <label for="nname" class="required-label">मोवाइल</label>
-                    <input type="text" name="mobile" id="nname">
+                    <label for="nname">जिल्ला</label>
+                    <input type="text" id="nname">
                 </div>
                 <div class="inp">
-                    <label for="nname">इमेल</label>
-                    <input type="email" name="email" id="nname">
+                    <label for="nname">गा.बि.स./न.पा.</label>
+                    <input type="text" id="nname">
                 </div>
                 <div class="inp">
-                    <label for="nname">पत्राचार गर्ने ठेगाना</label>
-                    <input type="text" name="mailing_addredd" id="nname">
+                    <label for="nname">वडा न.</label>
+                    <input type="text" id="nname">
                 </div>
-
+                <div class="inp">
+                    <label for="nname">सडकको नाम</label>
+                    <input type="text" id="nname">
+                </div>
+            </div>
+            <div class="d-flex mt-2">
+                <p class="form-titl mx-1">
+                    हालको
+                </p>
+                <div class="inp">
+                    <label for="nname">प्रदेश</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">जिल्ला</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">गा.बि.स./न.पा.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname" class="required-label">वडा न.</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">टोलको नाम</label>
+                    <input type="text" id="nname">
+                </div>
+                <div class="inp">
+                    <label for="nname">घर नं.</label>
+                    <input type="text" id="nname">
+                </div>
             </div>
         </div>
+    
         <div class="px-1">
             <p class="form-title mt-2">
                 नागरिकता </p>
             <div class="d-flex mt-2">
 
                 <div class="inp">
-                    <label for="nname" class="required-label">नागरिकता नं.</label>
-                    <input type="number" name="citizenship_number" id="nname">
+                    <label for="nname">फोन</label>
+                    <input type="number" id="nname">
                 </div>
                 <div class="inp">
-                    <label for="nname">जारी मिती(बि.स)</label>
-                    <input type="date" name="c_issue_date_nep" id="nname">
+                    <label for="nname" class="required-label">मोवाइल</label>
+                    <input type="text" id="nname">
                 </div>
                 <div class="inp">
-                    <label for="nname">जारी मिती(इ.स)</label>
-                    <input type="date" name="c_issue_date_eng" id="nname">
+                    <label for="nname">इमेल</label>
+                    <input type="email" id="nname">
                 </div>
                 <div class="inp">
-                    <label for="nname" class="required-label">जिल्ला</label>
-                    <input type="text" name="c_district" id="nname">
+                    <label for="nname">पत्राचार गर्ने ठेगाना</label>
+                    <input type="text" id="nname">
                 </div>
 
             </div>
@@ -290,8 +341,8 @@
             <div class="d-flex mt-2">
 
                 <div class="inp">
-                    <label for="nname" class="required-label">राहादानी नं.</label>
-                    <input type="number" name="passport_number" id="nname">
+                    <label for="nname" class="required-label">नागरिकता नं.</label>
+                    <input type="number" id="nname">
                 </div>
                 <div class="inp">
                     <label for="nname">जारी मिती(बि.स)</label>
@@ -353,8 +404,56 @@
 
 @section('scripts')
     <script>
-        var dad = document.getElementById("dad");
-        console.log(dad.value);
-        console.log("dad.value");
+        var d = document.getElementById("dad-block");
+        var m = document.getElementById("mom-block");
+        var g = document.getElementById("grandfather-block");
+        var ma = document.getElementById("married-block");
+        d.style.display = "none";
+        m.style.display = "none";
+        g.style.display = "none";
+        ma.style.display = "none";
+        var changeDad = function(event) {
+            if (event.target.checked == true) {
+                d.style.display = "block ";
+            } else if (event.target.checked == false) {
+                d.style.display = "none ";
+            }
+        }
+        var changeMom = function(event) {
+            if (event.target.checked == true) {
+                m.style.display = "block ";
+            } else if (event.target.checked == false) {
+                m.style.display = "none ";
+            }
+        }
+        var changeGrandfather = function(event) {
+            if (event.target.checked == true) {
+                g.style.display = "block ";
+            } else if (event.target.checked == false) {
+                g.style.display = "none ";
+            }
+        }
+        var changeMarried = function(event) {
+            if (event.target.checked == true) {
+                ma.style.display = "block ";
+            } else if (event.target.checked == false) {
+                ma.style.display = "none ";
+            }
+        }
     </script>
+    <script>
+        var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+                URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+    </script>
+    <script>
+        var removeFile = function() {
+            $(".img-div").load(" .img-div");
+        };
+    </script>
+    <script></script>
 @endsection
