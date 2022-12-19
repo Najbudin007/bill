@@ -36,9 +36,13 @@ class PerosnalDetailController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'image' => 'sometimes',
+            'name' => 'required',
+            'last_name' => 'required',
+            'Dob_bs' => 'required',
+            'gender' => 'required',
+            'religion' => 'required',
+            'nationality' => 'required',
+            'citizenship_number' => 'required',
         ]);
 
         $data =  new perosnalDetail();
@@ -62,6 +66,9 @@ class PerosnalDetailController extends Controller
         $data->disability = $request->disability;
         // Relatives Details
         $data->relativeDetails = $request->relativeDetails;
+        $data->father_name = $request->father_name;
+        $data->father_middle_name = $request->father_middle_name;
+        $data->father_last_name = $request->father_last_name;
         // permnanet Address
         $data->zone = $request->zone;
         $data->district = $request->district;
