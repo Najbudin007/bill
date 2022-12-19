@@ -61,12 +61,8 @@ class PerosnalDetailController extends Controller
         $data->file_no = $request->file_no;
         $data->disability = $request->disability;
         // Relatives Details
-        $data->dad = $request->dad;
-        $data->mom = $request->mom;
-        $data->grand_father = $request->grand_father;
-        $data->spouse = $request->spouse;
+        $data->relativeDetails = $request->relativeDetails;
         // permnanet Address
-        $data->address = $request->address;
         $data->zone = $request->zone;
         $data->district = $request->district;
         $data->vdc_municipality = $request->vdc_municipality;
@@ -90,24 +86,26 @@ class PerosnalDetailController extends Controller
         $data->mailing_address = $request->mailing_address;
         // citizenShip Details
         $data->citizenship_number = $request->citizenship_number;
-        $data->c_issue_date = $request->c_issue_date;
+        $data->c_issue_date_nep = $request->c_issue_date_nep;
+        $data->c_issue_date_eng = $request->c_issue_date_eng;
         $data->c_district = $request->c_district;
         // Passport Details
         $data->passport_number = $request->passport_number;
-        $data->p_issue_date = $request->p_issue_date;
+        $data->p_issue_date_eng = $request->p_issue_date_eng;
+        $data->p_issue_date_nep = $request->p_issue_date_nep;
         $data->p_district = $request->p_district;
         // voterId Details
         $data->voter_id_number = $request->voter_id_number;
-        $data->v_issue_date = $request->v_issue_date;
+        $data->v_issue_date_nep = $request->v_issue_date_nep;
+        $data->v_issue_date_eng = $request->v_issue_date_eng;
         $data->v_district = $request->v_district;
         $data->sthai_lekha_number = $request->sthai_lekha_number;
          // other Details
         $data->other_detail = $request->other_detail;
         $data->description = $request->description;
 
-         return redirect()->back();
         $data-> save();
-        return redirect()->back();
+        return redirect()->back()->with('msg','Perosnal Details Added');
     }
 
     /**
