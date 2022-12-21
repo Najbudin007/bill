@@ -35,9 +35,6 @@ return new class extends Migration
             $table->string('image')->nullable();
             // Relatives Details
             $table->string('relativeDetails')->comment('relativeDetails');
-            $table->string('father_name')->comment('father_name');
-            $table->string('father_middle_name')->comment('father_middle_name')->nullable();
-            $table->string('father_last_name')->comment('father_last_name');
             // permnanet Address
             $table->string('zone')->comment('permanentAddress');
             $table->string('district')->comment('permanentAddress');

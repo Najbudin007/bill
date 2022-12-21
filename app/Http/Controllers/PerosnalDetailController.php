@@ -66,9 +66,35 @@ class PerosnalDetailController extends Controller
         $data->disability = $request->disability;
         // Relatives Details
         $data->relativeDetails = $request->relativeDetails;
-        $data->father_name = $request->father_name;
-        $data->father_middle_name = $request->father_middle_name;
-        $data->father_last_name = $request->father_last_name;
+        //Father
+        $data->father_name_nep = $request->father_name_nep;
+        $data->father_middlename_nep = $request->father_middlename_nep;
+        $data->father_lastname_nep = $request->father_lastname_nep;
+        $data->father_name_eng = $request->father_name_eng;
+        $data->father_middlename_eng = $request->father_middlename_eng;
+        $data->father_lastname_eng = $request->father_lastname_eng;
+        // mother
+        $data->mother_name_nep = $request->mother_name_nep;
+        $data->mother_middlename_nep = $request->mother_middlename_nep;
+        $data->mother_lastname_nep = $request->mother_lastname_nep;
+        $data->mother_name_eng = $request->mother_name_eng;
+        $data->mother_middlename_eng = $request->mother_middlename_eng;
+        $data->mother_lastname_eng = $request->mother_lastname_eng;
+        // grandfather
+        $data->grandfather_name_nep = $request->grandfather_name_nep;
+        $data->grandfather_middlename_nep = $request->grandfather_middlename_nep;
+        $data->grandfather_lastname_nep = $request->grandfather_lastname_nep;
+        $data->grandfather_name_eng = $request->grandfather_name_eng;
+        $data->grandfather_middlename_eng = $request->grandfather_middlename_eng;
+        $data->grandfather_lastname_eng = $request->grandfather_lastname_eng;
+        // Spouse
+        $data->spouse_name_nep = $request->spouse_name_nep;
+        $data->spouse_middlename_nep = $request->spouse_middlename_nep;
+        $data->spouse_lastname_nep = $request->spouse_lastname_nep;
+        $data->spouse_name_eng = $request->spouse_name_eng;
+        $data->spouse_middlename_eng = $request->spouse_middlename_eng;
+        $data->spouse_lastname_eng = $request->spouse_lastname_eng;
+        
         // permnanet Address
         $data->zone = $request->zone;
         $data->district = $request->district;

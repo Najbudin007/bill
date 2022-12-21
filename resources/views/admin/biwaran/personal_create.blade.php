@@ -204,32 +204,32 @@
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">बाबुको नाम</label>
-                        <input type="text" name="father_name" id="nname">
+                        <input type="text" name="father_name_nep" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">बीचको नाम</label>
-                        <input type="text" name="father_middle_name" id="nname">
+                        <input type="text" name="father_middlename_nep" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">थर</label>
-                        <input type="text" name="father_last_name" id="nname">
+                        <input type="text" name="father_lastname_nep" id="nname">
                     </div>
 
                 </div>
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">Father Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="father_name_eng" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">Middle Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="father_middlename_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">Last Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="father_lastname_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname">बाबुको पेशा</label>
@@ -242,16 +242,16 @@
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">आमाको नाम</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="mother_name_nep" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">बीचको नाम</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="mother_middlename_nep" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">थर</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="mother_lastname_nep" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname">नाता</label>
@@ -262,16 +262,16 @@
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">Mother Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="mother_name_eng" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">Middle Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="mother_middlename_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">Last Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="mother_lastname_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname">आमाको पेशा</label>
@@ -284,16 +284,16 @@
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">हजुरबुवाको नाम</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="grandfather_name_nep" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">बीचको नाम</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="grandfather_middlename_nep" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">थर</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="grandfather_lastname_nep" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname">नाता</label>
@@ -304,16 +304,16 @@
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">Grand Father Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="grandfather_name_eng" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">Middle Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="grandfather_middlename_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">Last Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="grandfather_lastname_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname">हजुरबुवाको पेशा</label>
@@ -326,16 +326,16 @@
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">पति/पत्नीको नाम</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="spouse_name_nep" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">बीचको नाम</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="spouse_middlename_nep" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">थर</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="spouse_lastname_nep" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname">नाता</label>
@@ -346,16 +346,16 @@
                 <div class="d-flex " style="padding-left: 50px; padding-rignt:10px !important">
                     <div class="inp">
                         <label for="nname" class="required-label">Spouse Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="spouse_name_eng" id="nname">
                     </div>
 
                     <div class="inp">
                         <label for="nname">Middle Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="spouse_middlename_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname" class="required-label">Last Name</label>
-                        <input type="text" id="nname">
+                        <input type="text" name="spouse_lastname_eng" id="nname">
                     </div>
                     <div class="inp">
                         <label for="nname">पति/पत्नीको पेशा</label>
