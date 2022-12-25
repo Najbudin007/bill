@@ -14,7 +14,7 @@ class PerosnalDetailController extends Controller
      */
     public function index()
     {
-        //
+        return view("admin.biwaran.index");
     }
 
     /**
@@ -133,12 +133,18 @@ class PerosnalDetailController extends Controller
         $data->v_issue_date_eng = $request->v_issue_date_eng;
         $data->v_district = $request->v_district;
         $data->sthai_lekha_number = $request->sthai_lekha_number;
-         // other Details
+        // other Details
         $data->other_detail = $request->other_detail;
         $data->description = $request->description;
 
+<<<<<<< HEAD
+        return redirect()->back();
+        $data->save();
+        return redirect()->back();
+=======
         $data-> save();
         return redirect()->back()->with('msg','Perosnal Details Added');
+>>>>>>> 5ac98c408d22cac8caad85a4c880a63348655947
     }
 
     /**
