@@ -36,9 +36,13 @@ class PerosnalDetailController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'image' => 'sometimes',
+            'name' => 'required',
+            'last_name' => 'required',
+            'Dob_bs' => 'required',
+            'gender' => 'required',
+            'religion' => 'required',
+            'nationality' => 'required',
+            'citizenship_number' => 'required',
         ]);
 
         $data =  new perosnalDetail();
@@ -61,12 +65,37 @@ class PerosnalDetailController extends Controller
         $data->file_no = $request->file_no;
         $data->disability = $request->disability;
         // Relatives Details
-        $data->dad = $request->dad;
-        $data->mom = $request->mom;
-        $data->grand_father = $request->grand_father;
-        $data->spouse = $request->spouse;
+        $data->relativeDetails = $request->relativeDetails;
+        //Father
+        $data->father_name_nep = $request->father_name_nep;
+        $data->father_middlename_nep = $request->father_middlename_nep;
+        $data->father_lastname_nep = $request->father_lastname_nep;
+        $data->father_name_eng = $request->father_name_eng;
+        $data->father_middlename_eng = $request->father_middlename_eng;
+        $data->father_lastname_eng = $request->father_lastname_eng;
+        // mother
+        $data->mother_name_nep = $request->mother_name_nep;
+        $data->mother_middlename_nep = $request->mother_middlename_nep;
+        $data->mother_lastname_nep = $request->mother_lastname_nep;
+        $data->mother_name_eng = $request->mother_name_eng;
+        $data->mother_middlename_eng = $request->mother_middlename_eng;
+        $data->mother_lastname_eng = $request->mother_lastname_eng;
+        // grandfather
+        $data->grandfather_name_nep = $request->grandfather_name_nep;
+        $data->grandfather_middlename_nep = $request->grandfather_middlename_nep;
+        $data->grandfather_lastname_nep = $request->grandfather_lastname_nep;
+        $data->grandfather_name_eng = $request->grandfather_name_eng;
+        $data->grandfather_middlename_eng = $request->grandfather_middlename_eng;
+        $data->grandfather_lastname_eng = $request->grandfather_lastname_eng;
+        // Spouse
+        $data->spouse_name_nep = $request->spouse_name_nep;
+        $data->spouse_middlename_nep = $request->spouse_middlename_nep;
+        $data->spouse_lastname_nep = $request->spouse_lastname_nep;
+        $data->spouse_name_eng = $request->spouse_name_eng;
+        $data->spouse_middlename_eng = $request->spouse_middlename_eng;
+        $data->spouse_lastname_eng = $request->spouse_lastname_eng;
+        
         // permnanet Address
-        $data->address = $request->address;
         $data->zone = $request->zone;
         $data->district = $request->district;
         $data->vdc_municipality = $request->vdc_municipality;
@@ -90,24 +119,32 @@ class PerosnalDetailController extends Controller
         $data->mailing_address = $request->mailing_address;
         // citizenShip Details
         $data->citizenship_number = $request->citizenship_number;
-        $data->c_issue_date = $request->c_issue_date;
+        $data->c_issue_date_nep = $request->c_issue_date_nep;
+        $data->c_issue_date_eng = $request->c_issue_date_eng;
         $data->c_district = $request->c_district;
         // Passport Details
         $data->passport_number = $request->passport_number;
-        $data->p_issue_date = $request->p_issue_date;
+        $data->p_issue_date_eng = $request->p_issue_date_eng;
+        $data->p_issue_date_nep = $request->p_issue_date_nep;
         $data->p_district = $request->p_district;
         // voterId Details
         $data->voter_id_number = $request->voter_id_number;
-        $data->v_issue_date = $request->v_issue_date;
+        $data->v_issue_date_nep = $request->v_issue_date_nep;
+        $data->v_issue_date_eng = $request->v_issue_date_eng;
         $data->v_district = $request->v_district;
         $data->sthai_lekha_number = $request->sthai_lekha_number;
         // other Details
         $data->other_detail = $request->other_detail;
         $data->description = $request->description;
 
+<<<<<<< HEAD
         return redirect()->back();
         $data->save();
         return redirect()->back();
+=======
+        $data-> save();
+        return redirect()->back()->with('msg','Perosnal Details Added');
+>>>>>>> 5ac98c408d22cac8caad85a4c880a63348655947
     }
 
     /**
