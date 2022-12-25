@@ -14,7 +14,7 @@ class PerosnalDetailController extends Controller
      */
     public function index()
     {
-        //
+        return view("admin.biwaran.index");
     }
 
     /**
@@ -101,12 +101,12 @@ class PerosnalDetailController extends Controller
         $data->v_issue_date = $request->v_issue_date;
         $data->v_district = $request->v_district;
         $data->sthai_lekha_number = $request->sthai_lekha_number;
-         // other Details
+        // other Details
         $data->other_detail = $request->other_detail;
         $data->description = $request->description;
 
-         return redirect()->back();
-        $data-> save();
+        return redirect()->back();
+        $data->save();
         return redirect()->back();
     }
 
