@@ -38,6 +38,7 @@
                         <ul class="inner-ul">
                             <li><a href="#">कर सम्बन्धि विवरण</a></li>
                             <li><a href="{{ route('personalBivaran.create') }}">करदाताको विवरण</a></li>
+                            <li><a href="{{ route('jagga_darta.create') }}">व्यक्तिगत जग्गा दर्ता विवरण </a></li>
                         </ul>
                     </li>
                     <li>

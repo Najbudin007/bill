@@ -151,7 +151,6 @@
                     <div class="inp">
                         <label for="nname">अपाङ्ग हो ?</label>
                         <input type="checkbox"  name="disability" id="" class="m-auto">
-
                     </div>
                 </div>
             </div>
