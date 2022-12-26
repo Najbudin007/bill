@@ -94,7 +94,7 @@ class PerosnalDetailController extends Controller
         $data->spouse_name_eng = $request->spouse_name_eng;
         $data->spouse_middlename_eng = $request->spouse_middlename_eng;
         $data->spouse_lastname_eng = $request->spouse_lastname_eng;
-        
+
         // permnanet Address
         $data->zone = $request->zone;
         $data->district = $request->district;
@@ -137,14 +137,8 @@ class PerosnalDetailController extends Controller
         $data->other_detail = $request->other_detail;
         $data->description = $request->description;
 
-<<<<<<< HEAD
-        return redirect()->back();
         $data->save();
-        return redirect()->back();
-=======
-        $data-> save();
-        return redirect()->back()->with('msg','Perosnal Details Added');
->>>>>>> 5ac98c408d22cac8caad85a4c880a63348655947
+        return redirect()->back()->with('msg', 'Perosnal Details Added');
     }
 
     /**

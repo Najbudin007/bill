@@ -86,12 +86,8 @@
                         <i class="ri-line-chart-line"></i>
                         <ul class="inner-ul">
                             <li><a href="#">कर सम्बन्धि विवरण</a></li>
-<<<<<<< HEAD
-                            <li><a href="{{ route('personalBivaran.index') }}">करदाताको विवरण</a></li>
-=======
                             <li><a href="{{ route('personalBivaran.create') }}">करदाताको विवरण</a></li>
                             <li><a href="{{ route('jagga_darta.create') }}">व्यक्तिगत जग्गा दर्ता विवरण </a></li>
->>>>>>> 5ac98c408d22cac8caad85a4c880a63348655947
                         </ul>
                     </li>
                     <li>
