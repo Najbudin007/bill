@@ -138,7 +138,7 @@ class PerosnalDetailController extends Controller
         $data->description = $request->description;
 
         $data->save();
-        return redirect()->back()->with('msg', 'Perosnal Details Added');
+        return redirect()->route('jagga_darta.create')->with('msg', 'Perosnal Details Added');
     }
 
     /**
