@@ -366,8 +366,32 @@
 
         <div class="container">
             <div class="col-md-12 text-center mt-5">
-                <button type="submit" class="btn btn-success btn-sm">सुरक्षित गर्नुहोस्</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success btn-sm">सुरक्षित गर्नुहोस्</button>
             </div>
+
+            <!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">नगर्पालिका कर</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            अर्को पनि तथन्क्या थप्ने हो ?
+        </div>
+        <div class="modal-footer">
+         <a href="{{route('jagga_darta.create')}}"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">हो</button></a> 
+          <button type="submit" class="btn btn-primary">होइन </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
         </div>
 
     </div>
