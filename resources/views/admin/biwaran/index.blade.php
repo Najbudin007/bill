@@ -47,6 +47,13 @@
             <div class="col-md-2"><button class=" btn btn-sm btn-success">Submit</button></div>
         </div>
 
+        <div class="col-md-12 mt-4 buttons">
+            <div class="flex">
+              <a href="{{route('personalBivaran.create')}}"><button class="btn btn-success btn-sm"> <i class="ri-add-circle-line"></i> नया प्रबिस्टी</button></a>  
+               <a href="{{route('personalBivaran.index')}}"><button class="btn btn-primary btn-sm"> <i class="ri-restart-fill"></i> पुर्न लोड</button></a> 
+                <a href=""><button class="btn btn-sm btn-dark"><i class="ri-printer-line"></i> मुद्रन गर्नुहोस</button></a>
+            </div>
+        </div>
         <hr>
 
         <div class="tables mt-3">
