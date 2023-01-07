@@ -1,13 +1,20 @@
-body {
-    padding-top: 50px;
-    /*padding-bottom: 20px;*/
-    background:url("images/nepal.jpg") no-repeat;
+html {
+    font-family: sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.content-img {
+    background:url("../images/nepal.jpg") no-repeat;
     background-size: 105%;
     overflow-x: hidden;
     background-color: rgba(22, 30, 42, 0.2);
     background-blend-mode: overlay;
 }
+
 label{
+
     padding-left: 10px; 
 }
 
@@ -124,7 +131,7 @@ a:focus {
 .logo{
     width: 96px;
     height: 84px;
-    background-image: url("images/nepalGovernment.png");
+    background-image: url("../images/nepalGovernment.png");
     position: absolute;
     margin-left: 3px;
     margin-top: 2px;
