@@ -64,6 +64,7 @@ class PerosnalDetailController extends Controller
                     $bill[$key]["rate"] = $first;
                     $bill[$key]["quantity"] = $request->quantity[$key];
                     $bill[$key]["kaifiyat"] = $request->kaifiyat[$key] ?? "null";
+                    $bill[$key]["dar_rate_srishak"] = $request->dar_rate_srishak[$key] ?? "null";
                     $bill[$key]["total"] = $request->quantity[$key] * $first;
                     $total += $request->quantity[$key] * $first;
                 }
@@ -74,15 +75,20 @@ class PerosnalDetailController extends Controller
         $data->firta = abs($firta);
         $data->total = $total;
         $data->dar_rate_srishak = $request->dar_rate_srishak;
+        $data->kaifiyat1 = $request->kaifiyat1;
         $data->prati_ekai_dar = $request->prati_ekai_dar;
         $data->parimad = $request->parimad;
         $data->kaifiyat = $request->kaifiyat;
         $data->nagad = $request->nagad;
-        // $data->save();
-        $bill["total"] = abs($total);
-        $bill["firta"] = abs($firta);
-        dd($bill, $total, abs($firta));
-        return redirect()->back()->with('msg', 'Perosnal Details Added');
+        $data->save();
+        $bills = [];
+        $bills["total"] = abs($total);
+        $bills["firta"] = abs($firta);
+        $bills["kaifiyat1"] = $request->kaifiyat1;
+        $bills["nagad"] = abs($request->nagad);
+        $bills["sanket"] = $request->kar_data_sanket;
+        // dd($bill);
+        return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
     }
 
     /**

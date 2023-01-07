@@ -33,6 +33,7 @@ return new class extends Migration
             $table->string('payment_mtehod')->nullable();
             $table->string('mudra')->nullable();
             $table->string('date')->nullable();
+            $table->string('kaifiyat1')->nullable();
             $table->string('discription')->nullable();
             $table->longText('dar_rate_srishak')->nullable();
             $table->longText('prati_ekai_dar')->nullable();

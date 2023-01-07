@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="container border my-5 p-3">
+    <div class="container border ">
         <div class="header ">
             <div class="logo">
                 <img src="{{ asset('images/sar.png') }}" alt="">
@@ -26,105 +26,96 @@
                 <p>इशनाथ नगरपालिका</p>
                 <p>रौतहट, मधेश प्रदेश, नेपाल</p>
                 <p class="title">Wealth and land bill (asdasd dasd)</p>
-                <p>रौतहट, मधेश प्रदेश, नेपा4</p>
             </div>
         </div>
-        <div class="belowheader mt-2">
-            <p>Bidhutiya kar ko sanket num: 1234567890oijhgfe567esrdfg775567</p>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
+        <div class="d-flex justify-content-between mt-4">
+            <div>
+                <p>Bidhutiya kar ko sanket num: 1234567890oijhgfe567esrdfg775567</p>
+
                 <p>rasid no : 123</p>
-                <p>miti : 2020/02/10</p>
-                <p>kardata ko name thar : 123</p>
-                <p>N.P/G.P : इशनाथ नगरपालिका</p>
-                <p>ghar no : </p>
+
             </div>
-            <div class="col-md-4">
-                <br>
-                <p>AA.OO : 2020/2020</p>
-                <p>Pradesh : sdfsdfsd</p>
-                <p>Ward No : sdfsdfsd</p>
-                <p>Kar Data sanket : 00-8-8000</p>
-            </div>
-            <div class="col-md-4">
-                <p>paxilo patak tireko num : </p>
-                <br>
-                <p>District : dasda</p>
-                <p>Sadak/tolko name : dasda</p>
-                <p>Antarik sanket : 2222</p>
+
+            <div>
+                <p>karyalaya code num : 23456789 </p>
+                <p>aaya barsha : @php
+                    $year = date('Y');
+                    $month = date('m');
+                    $day = date('d');
+                    $date = Bsdate::eng_to_nep($year, $month, $day);
+                    echo $date['year'];
+                @endphp
+                    /
+                    <?php
+                    if ($date['year'] == '&#2408;&#2406;&#2413;&#2415;') {
+                        echo '२०८०';
+                    } else {
+                        echo '२०८१';
+                    }
+                    ?> </p>
+                <p>miti : @php
+
+                    echo $date['date'] . ' ' . $date['nmonth'] . ' ' . $date['year'];
+                @endphp </p>
+
             </div>
         </div>
         <center class="text-bold">(Jagga mapan ekaai adasda dasdasd asdasd asdasda dasdasd)</center>
-        <div class="tables mt-2">
-            <div class="titles">
-                <div class="bordbox">Jagga ko biwaran</div>
-                <div>Vautik samarachana ko biwaran</div>
-            </div>
-            <div class="content">
-                <div class="bordbox box1">Sabik GBSSD</div>
-                <div class="bordbox box2">Woda No
-                    <div class="d-flex h-100">
-                        <div class="v-border">sabik</div>
-                        <div class="v-border">hal</div>
-                    </div>
-                </div>
-                <div class="bordbox box3">Naksha No</div>
-                <div class="bordbox box4">Kar xetra</div>
-                <div class="bordbox box5">Kitta No.</div>
-                <div class="bordbox box6">Jamma xetra fal</div>
-                <div class="bordbox box7">Kar Yogya mulya</div>
-                <div class="bordbox box8">Sadak ko name</div>
-                <div class="bordbox box9">Ghar no</div>
-                <div class="bordbox box10">banawot ko kisim</div>
-                <div class="bordbox box11">prakar</div>
-                <div class="bordbox box12">prayog</div>
-                <div class="bordbox box13">xetrafal w.k</div>
-                <div class="bordbox box14">kamyan mulya</div>
-                <div class="bordbox box15">sampati ko jamma mulya</div>
-            </div>
-            <div class="titles">
-                <div>Vumi kar</div>
-            </div>
-            <div class="content">
-                <div class="bordbox box1">Sabik GBSSD</div>
-                <div class="bordbox box2">
-                    <div class="d-flex" style="height: 100%">
-                        <div class="v-border1">sabik</div>
-                        <div class="v-border1">hal</div>
-                    </div>
-                </div>
-                <div class="bordbox box3">Naksha No</div>
-                <div class="bordbox box4">Kar xetra</div>
-                <div class="bordbox box5">Kitta No.</div>
-                <div class="bordbox box6">Jamma xetra fal</div>
-                <div class="bordbox box7">Kar Yogya mulya</div>
-                <div class="bordbox box8">Sadak ko name</div>
-                <div class="bordbox box9">Ghar no</div>
-                <div class="bordbox box10">banawot ko kisim</div>
-                <div class="bordbox box11">prakar</div>
-                <div class="bordbox box12">prayog</div>
-                <div class="bordbox box13">xetrafal w.k</div>
-                <div class="bordbox box14">kamyan mulya</div>
-                <div class="bordbox box15">sampati ko jamma mulya</div>
-            </div>
-            <div class="content">
-                <div class=" box1"></div>
-                <div class=" box2">
+        <table class="table table-bordered mt-3">
+            <tr>
+                <th>S.N</th>
+                <th style="width: 170px">Sanket Number</th>
+                <th>biwaran</th>
+                <th>prayojan</th>
+                <th>rakam</th>
+                <th style="width: 150px">praptiko madhyam</th>
+                <th style="width: 150px">check wa aanya num</th>
+            </tr>
+            @foreach ($bill as $key => $bil)
+                <tr>
+                    <td>{{ $key + 1 }}</td>
+                    <td>{{ $bills['sanket'] }}</td>
+                    <td>{{ $bil['kaifiyat'] }}</td>
+                    <td>{{ $bil['dar_rate_srishak'] }}</td>
+                    <td>{{ $bil['total'] }}</td>
 
+                    <td>nagad</td>
+                    <td></td>
+                </tr>
+            @endforeach
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2">total:</td>
+                <td>{{ $bills['total'] }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="7">Kaifiyat: {{ $bills['kaifiyat1'] }}</td>
+
+            </tr>
+        </table>
+        <div class="mt-5">
+            <div class="row">
+                <div class="col-4">
+                    <p>sahi: </p>
+                    <p>sahi: staniya lekha num </p>
+                    <p>print miti: @php
+
+                        echo $date['date'] . ' ' . $date['nmonth'] . ' ' . $date['year'];
+                    @endphp </p>
                 </div>
-                <div class=" box3"></div>
-                <div class="bordbox box4" style="height: 30px">Jamma</div>
-                <div class="bordbox box5" style="width:160px !important">2-0-0-3</div>
-                <div class="bordbox box7">0|00</div>
-                <div class=" box8"></div>
-                <div class=" box9"></div>
-                <div class=" box10"></div>
-                <div class=" box11"></div>
-                <div class=" box12"></div>
-                <div class=" box13"></div>
-                <div class="bordbox box14"></div>
-                <div class="bordbox box15">0|00</div>
+                <div class="col-4">
+                    <p>bujaune ko sahi</p>
+                    <p>name: {{ auth()->user()->name }}</p>
+                </div>
+                <div class="col-4">
+                    <p>darja:</p>
+                    <p>darja:karmachari sanket num:</p>
+                    <p>print garne ko name: {{ auth()->user()->name }}</p>
+                </div>
             </div>
         </div>
     </div>
