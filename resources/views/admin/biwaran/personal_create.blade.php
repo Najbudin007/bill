@@ -160,12 +160,6 @@
 
                     </div>
                 </div>
-
-                <div class="container">
-                    <div class="col-md-12 text-center mt-5">
-                        <button type="submit" class="btn btn-primary btn">कर अशुली </button>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -270,6 +264,12 @@
                         <input type="text" disabled id="nname">
                     </div>
 
+                </div>
+
+                <div class="container">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary btn">कर अशुली </button>
+                    </div>
                 </div>
             </div>
 

@@ -91,74 +91,18 @@
                     </li>
                     <li>
                         <i class="ri-bookmark-line"></i>
-                        <ul class="inner-ul">
+                        {{-- <ul class="inner-ul">
                             <li><a href="#">अन्य विवरण</a></li>
                             <li><a href="#">खारेज करदाताको विवरण</a></li>
                             <li><a href="#">सम्पति मुल्यांकन रोक्का / फुकुवा विवरण</a></li>
                             <li><a href="#">सिफारिस</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li>
                         <i class="ri-bill-line"></i>
-                        <ul class="inner-ul">
+                        {{-- <ul class="inner-ul">
                             <li><a href="#">रसिद ब्यबस्थापन</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="ri-printer-line"></i>
-                        <ul class="inner-ul">
-                            <li><a href="#">प्रतिवेदन</a></li>
-                            <li>
-                                <div class="dropdown">
-                                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        करदाताको प्रतिवेदन
-                                    </button>
-                                    <ul class="dropdown-menu sidebar-dropdown-menu ">
-                                        <li><a class="dropdown-item" href="#">वडागत आम्दानी विवरण</a></li>
-                                        <li><a class="dropdown-item" href="#">साबिक र हालको आर्थिक वर्षको सम्पति
-                                                करको
-                                                तुलनात्मक प्रतिबेदन</a></li>
-                                        <li><a class="dropdown-item" href="#">वडागत Data Entry को विवरण</a></li>
-                                        <li><a class="dropdown-item" href="#">दुई लाख भन्दा माथिको करदाताहरुको
-                                                विवरण</a></li>
-                                        <li><a class="dropdown-item" href="#">करदाताको विस्तृत बिबरण</a></li>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="dropdown">
-                                    <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        संकलन केन्द्रले बुझाउनुपर्ने प्रतिबेदनहरु </button>
-                                    <ul class="dropdown-menu sidebar-dropdown-menu ">
-                                        <li><a class="dropdown-item" href="#">संकलन केन्द्रले बुझाउनुपर्ने
-                                                प्रतिबेदनहरु</a></li>
-                                        <li><a class="dropdown-item" href="#">रसिद नम्बर अनुसार आय संकलनको
-                                                बिबरण</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">रसिद नम्बर अनुसार आय संकलनको बिबरण
-                                                (नयाँ)</a></li>
-                                        <li><a class="dropdown-item" href="#">संकलन केन्द्र अनुसारको सारांश
-                                                प्रतिवेदन</a></li>
-                                        <li><a class="dropdown-item" href="#">आय शीर्षक अनुसार आय संकलनको
-                                                सारांश</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">आय शीर्षक अनुसारको विस्तृत आय
-                                                विवरण</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">संकलन केन्द्रले बुझाउने
-                                                प्रतिबेदन</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">दर रेट अनुसारको सारांश प्रतिबेदन</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">दर रेट अनुसारको आय संकलनको
-                                                सारांश</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">रद्द भएका रसिदहरुको विवरण</a></li>
-                                </div>
-                            </li>
-
-                        </ul>
+                        </ul> --}}
                     </li>
                 </ul>
             </div>
