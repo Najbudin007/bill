@@ -38,7 +38,7 @@
                         <div class="d-flex mt-3 w-100">
                             <div class="inps">
                                 <label for="nname">कर को प्रकार </label>
-                                <select id="" name="kar_ko_prakar"">
+                                <select id="" name="kar_ko_prakar">
                                     <option value="कृपया छान्नुहोस..." disabled selected>कृपया छान्नुहोस...</option>
                                     <option value="ADV - विज्ञापन कर">ADV - विज्ञापन कर </option>
                                     <option value="2">2</option>
@@ -53,7 +53,7 @@
                                 <input type="text" name="kar_data_sanket" id="nname">
                             </div>
                             <div class="inps">
-                                <label for="nname">पुरा नाम</label>
+                                <label for="nname" class="required-label">पुरा नाम</label>
                                 <input type="text" name="fullname" id="nname">
                             </div>
                             <div class="inps">
@@ -77,7 +77,7 @@
                                 <input type="text" value="माधव नारायण नगरपालिका" name="municipality" id="nname">
                             </div>
                             <div class="inps">
-                                <label for="nname">वाडा न:</label>
+                                <label for="nname" class="required-label">वाडा न:</label>
                                 <input type="text" name="ward_no" id="nname">
                             </div>
 
@@ -97,8 +97,8 @@
                         </div>
                         <div class="d-flex mt-1 w-100">
                             <div class="inps">
-                                <label for="nname">सन्कलन काउन्टर </label>
-                                <select id="" name="counter"">
+                                <label for="nname" class="required-label">सन्कलन काउन्टर </label>
+                                <select id="" name="counter">
                                     <option value="कृपया छान्नुहोस..." disabled selected>कृपया छान्नुहोस...</option>
                                     <option value="01-विविध तथा नगदि संकलन केन्द्र">01-विविध तथा नगदि संकलन केन्द्र</option>
                                     <option value="02-मालपोत संकलन केन्द्र">02-मालपोत संकलन केन्द्र</option>
@@ -106,7 +106,7 @@
                             </div>
 
                             <div class="inps">
-                                <label for="nname">रसिद प्रकार</label>
+                                <label for="nname" class="required-label">रसिद प्रकार</label>
                                 <select id="" name="bill_type">
                                     <option value="कृपया छान्नुहोस..." disabled selected>कृपया छान्नुहोस...</option>
                                     <option value="नगद">नगद</option>
@@ -119,7 +119,7 @@
                                 <input type="text" name="bill_number" id="nname">
                             </div>
                             <div class="inps">
-                                <label for="nname">साहयक मोड्युल</label>
+                                <label for="nname" class="required-label">साहयक मोड्युल</label>
                                 <input type="text" value="01 - आन्तरिक आय खाता" name="sahayak_module" id="nname">
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                                 <input type="text" name="mudra" id="nname">
                             </div>
                             <div class="inps">
-                                <label for="nname">मिती</label>
+                                <label for="nname" class="required-label">मिती</label>
                                 <input type="date" name="date" id="nname">
                             </div>
 
@@ -152,8 +152,8 @@
                         <div class="mt-2 px-1">
                             <div class="d-flex mt-4">
                                 <div class="inp w-50">
-                                    <label for="nname">कैफियत</label>
-                                    <textarea type="text" class="form-control" name="discription" id="nname"></textarea>
+                                    <label for="nname" class="required-label">कैफियत</label>
+                                    <textarea type="text" class="form-control" name="kaifiyat1" id="nname"></textarea>
                                 </div>
                             </div>
                         </div>

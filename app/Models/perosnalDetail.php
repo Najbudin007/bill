@@ -9,4 +9,10 @@ class perosnalDetail extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $casts = [
+        "dar_rate_srishak" => "array",
+        "prati_ekai_dar" => "array",
+        "parimad" => "array",
+        "kaifiyat" => "array",
+    ];
 }
