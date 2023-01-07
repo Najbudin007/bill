@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container-fluid content-img">
+    <div class="container-fluid content-img" style="height: 100vh">
 
         <div class="container body-content">
 
