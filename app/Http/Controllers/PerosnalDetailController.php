@@ -71,7 +71,7 @@ class PerosnalDetailController extends Controller
         }
 
         $firta = $request->nagad - $total;
-        $data->firta = $firta;
+        $data->firta = abs($firta);
         $data->total = $total;
         $data->dar_rate_srishak = $request->dar_rate_srishak;
         $data->prati_ekai_dar = $request->prati_ekai_dar;
@@ -79,8 +79,9 @@ class PerosnalDetailController extends Controller
         $data->kaifiyat = $request->kaifiyat;
         $data->nagad = $request->nagad;
         // $data->save();
-
-        dd($bill, $total, $firta);
+        $bill["total"] = abs($total);
+        $bill["firta"] = abs($firta);
+        dd($bill, $total, abs($firta));
         return redirect()->back()->with('msg', 'Perosnal Details Added');
     }
 
