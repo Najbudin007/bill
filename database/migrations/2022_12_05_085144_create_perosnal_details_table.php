@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('municipality')->nullable();
             $table->string('ward_no')->nullable();
             $table->string('mobile')->nullable();
-            // Rasid 
+            // Rasid
             $table->string('counter')->nullable();
             $table->string('bill_type')->nullable();
             $table->string('bill_number')->nullable();
@@ -34,8 +34,14 @@ return new class extends Migration
             $table->string('mudra')->nullable();
             $table->string('date')->nullable();
             $table->string('discription')->nullable();
+            $table->longText('dar_rate_srishak')->nullable();
+            $table->longText('prati_ekai_dar')->nullable();
+            $table->longText('parimad')->nullable();
+            $table->longText('kaifiyat')->nullable();
+            $table->string('nagad')->nullable();
+            $table->string('firta')->nullable();
+            $table->string('total')->nullable();
             $table->timestamps();
-
         });
     }
 
