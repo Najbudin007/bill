@@ -56,7 +56,31 @@ class PerosnalDetailController extends Controller
         $data->mudra = $request->mudra;
         $data->date = $request->date;
         $data->discription = $request->discription;
-        $data->save();
+        $bill = [];
+        $total = 0;
+        if ($request->rate && $request->quantity) {
+            foreach ($request->rate as $key => $first) {
+                if (isset($request->quantity[$key])) {
+                    $bill[$key]["rate"] = $first;
+                    $bill[$key]["quantity"] = $request->quantity[$key];
+                    $bill[$key]["kaifiyat"] = $request->kaifiyat[$key] ?? "null";
+                    $bill[$key]["total"] = $request->quantity[$key] * $first;
+                    $total += $request->quantity[$key] * $first;
+                }
+            }
+        }
+
+        $firta = $request->nagad - $total;
+        $data->firta = $firta;
+        $data->total = $total;
+        $data->dar_rate_srishak = $request->dar_rate_srishak;
+        $data->prati_ekai_dar = $request->prati_ekai_dar;
+        $data->parimad = $request->parimad;
+        $data->kaifiyat = $request->kaifiyat;
+        $data->nagad = $request->nagad;
+        // $data->save();
+
+        dd($bill, $total, $firta);
         return redirect()->back()->with('msg', 'Perosnal Details Added');
     }
 

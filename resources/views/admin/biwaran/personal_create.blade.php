@@ -1,25 +1,30 @@
 @extends('admin.layouts.master')
 @section('content')
+    <style>
+        .delete-icon {
+            cursor: pointer;
+        }
+    </style>
     @if ($errors->any())
         @foreach ($errors->all() as $error)
             <div>{{ $error }}</div>
         @endforeach
     @endif
 
-    <div class="p-form">
-        @if (session()->has('msg'))
-            <div class="alert alert-success">
-                {{ session()->get('msg') }}
+    <form action="{{ route('personalBivaran.store') }}" method="POST" enctype="multipart/form-data">
+        <div class="p-form">
+            @if (session()->has('msg'))
+                <div class="alert alert-success">
+                    {{ session()->get('msg') }}
+                </div>
+            @endif
+            <div class="form-top mb-2">
+                <span>आय रसिद </span>
+                <span>कर अशुलि </span>
             </div>
-        @endif
-        <div class="form-top mb-2">
-            <span>आय रसिद </span>
-            <span>कर अशुलि </span>
-        </div>
 
 
-        <div class="row px-1">
-            <form action="{{ route('personalBivaran.store') }}" method="POST" enctype="multipart/form-data">
+            <div class="row px-1">
                 @csrf
                 <div class="d-flex w-100">
                     <div class="col-12">
@@ -161,84 +166,156 @@
                         <button type="submit" class="btn btn-primary btn">कर अशुली </button>
                     </div>
                 </div>
-                <form>
+            </div>
         </div>
-    </div>
 
-    <div>
+        <div>
 
-        <div class="col-md-12 mt-4 buttons">
-            <div class="flex">
-                <button class="btn btn-success btn-sm" id="button" type="button"> <i class="ri-add-circle-line"></i>
-                    नया
-                    प्रबिस्टी</button>
+            <div class="col-md-12 mt-4 buttons">
+                <div class="flex">
+                    <button class="btn btn-success btn-sm" id="button" type="button"> <i
+                            class="ri-add-circle-line"></i>
+                        नया
+                        प्रबिस्टी</button>
 
-                {{-- <a href="{{ route('personalBivaran.index') }}"><button class="btn btn-primary btn-sm"> <i
+                    {{-- <a href="{{ route('personalBivaran.index') }}"><button class="btn btn-primary btn-sm"> <i
                             class="ri-restart-fill"></i> पुर्न लोड</button></a>
 
                 <a href=""><button class="btn btn-sm btn-dark"><i class="ri-printer-line"></i> मुद्रन
                         गर्नुहोस</button></a> --}}
+                </div>
             </div>
+            <hr>
+
+            <div class="tables mt-3">
+                <table class="table table-striped" id="table">
+                    <tr class="theading">
+                        <th></th>
+                        <th>क्र.स.</th>
+                        <th>दररेट शीर्षक</th>
+                        <th>प्रति एकाई दर</th>
+                        <th>परिमाण</th>
+                        {{-- <th>रकम</th> --}}
+                        <th>कैफियत</th>
+                    </tr>
+                    <tr>
+                        <td><i class="ri-delete-bin-line text-danger delete-icon"></i></td>
+                        <td>1</td>
+                        <td>
+                            <select name="dar_rate_srishak[]" id="">
+                                <option value="" disabled selected>Please Select</option>
+                                <option value="सम्पती कर">सम्पती कर</option>
+                                <option value="बक्यौता मालपोत/भुमिकर">बक्यौता मालपोत/भुमिकर</option>
+                                <option value="">सम्पती कर</option>
+                            </select>
+                        </td>
+                        <td><input type="number" value="1" name="rate[]"></td>
+                        <td><input type="number" value="1" name="quantity[]"></td>
+                        {{-- <td><input type="text" value="1"></td> --}}
+                        <td><input type="text" value="1" name="kaifiyat[]"></td>
+
+                    </tr>
+                </table>
+                <div class="d-flex mt-5 w-100 justify-content-end">
+                    <div class="inps">
+                        <label for="nname">जम्मा रकम:</label>
+                        <input type="text" disabled id="nname">
+                    </div>
+
+                    <div class="inps">
+                        <label for="nname">अक्षेरुपी:</label>
+                        <input type="text" disabled id="nname">
+                    </div>
+                </div>
+                <div class="d-flex mt-3 w-100 ">
+                    <div class="inps">
+                        <label for="nname">बैंक भौचर</label>
+                        <input type="text" disabled id="nname" value="bank account">
+                    </div>
+
+                    <div class="inps">
+                        <label for="nname">नगद:</label>
+                        <input type="number" name="nagad" id="nname">
+                    </div>
+                    <div class="inps">
+                        <label for="nname">फिर्ता रकम:</label>
+                        <input type="text" disabled id="nname">
+                    </div>
+                    <div class="inps">
+                        <label for="nname">प्रयोगकर्ता::</label>
+                        <input type="text" disabled id="nname">
+                    </div>
+                </div>
+                <h5 class="mt-3">चेक विवरण</h5>
+                <div class="d-flex mt-3 w-100 ">
+                    <div class="inps">
+                        <label for="nname">मिति:</label>
+                        <input type="date" disabled id="nname" value="bank account">
+                    </div>
+
+                    <div class="inps">
+                        <label for="nname">बैंकको नाम:</label>
+                        <input type="text" disabled id="nname">
+                    </div>
+
+                </div>
+                <div class="d-flex mt-3 w-100 mb-5 pb-5 ">
+                    <div class="inps">
+                        <label for="nname">चेक नं:</label>
+                        <input type="date" disabled id="nname" value="bank account">
+                    </div>
+
+                    <div class="inps ">
+                        <label for="nname">चेक रकम:</label>
+                        <input type="text" disabled id="nname">
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-        <hr>
+        <form>
 
-        <div class="tables mt-3">
-            <table class="table table-striped" id="table">
-                <tr class="theading">
-                    <th></th>
-                    <th>क्र.स.</th>
-                    <th>दररेट शीर्षक</th>
-                    <th>प्रति एकाई दर</th>
-                    <th>परिमाण</th>
-                    {{-- <th>रकम</th> --}}
-                    <th>कैफियत</th>
-                </tr>
-                <tr>
-                    <td><i class="ri-delete-bin-line text-danger delete-icon"></i></td>
-                    <td>1</td>
-                    <td>
-                        <select name="" id="">
-                            <option value="" disabled selected>Please Select</option>
-                            <option value="सम्पती कर">सम्पती कर</option>
-                            <option value="बक्यौता मालपोत/भुमिकर">बक्यौता मालपोत/भुमिकर</option>
-                            <option value="">सम्पती कर</option>
-                        </select>
-                    </td>
-                    <td><input type="text" value="1" name="rate[]"></td>
-                    <td><input type="text" value="1" name="quantity[]"></td>
-                    {{-- <td><input type="text" value="1"></td> --}}
-                    <td><input type="text" value="1" name="kaifiyat[]"></td>
-
-                </tr>
-            </table>
-        </div>
-
-    </div>
-
-    <script>
-        var btn = document.getElementById("button");
-        var table = document.getElementById("table");
-        btn.addEventListener("click", function() {
-            table.insertAdjacentHTML("beforeend", `
+            <script>
+                var btn = document.getElementById("button");
+                var table = document.getElementById("table");
+                var i = 1;
+                btn.addEventListener("click", function() {
+                    i++;
+                    table.insertAdjacentHTML("beforeend", `
               <tr>
                     <td><i class="ri-delete-bin-line text-danger delete-icon"></i></td>
-                    <td>1</td>
+                    <td>${i}</td>
                     <td>
-                        <select name="" id="">
+                        <select name="dar_rate_srishak[]" id="">
                             <option value="" disabled selected>Please Select</option>
                             <option value="सम्पती कर">सम्पती कर</option>
                             <option value="बक्यौता मालपोत/भुमिकर">बक्यौता मालपोत/भुमिकर</option>
                             <option value="">सम्पती कर</option>
                         </select>
                     </td>
-                    <td><input type="text" value="1" name="rate[]"></td>
-                    <td><input type="text" value="1" name="quantity[]"></td>
+                    <td><input type="number" value="1" name="rate[]"></td>
+                    <td><input type="number" value="1" name="quantity[]"></td>
                     {{-- <td><input type="text" value="1"></td> --}}
                     <td><input type="text" value="1" name="kaifiyat[]"></td>
 
                 </tr>
             `);
-        });
-    </script>
+                    var rbtn = document.querySelectorAll('.delete-icon');
+                    rbtn.forEach(btns => {
+                        btns.addEventListener('click', function(e) {
+                            console.log("Asd");
+                            e.target.parentElement.parentElement.remove();
+                        })
+                    });
+                });
+                var rbtn = document.querySelectorAll('.delete-icon');
+                rbtn.forEach(btns => {
+                    btns.addEventListener('click', function(e) {
+                        console.log("Asd");
+                        e.target.parentElement.parentElement.remove();
+                    })
+                });
+            </script>
 
-@endsection
+        @endsection
