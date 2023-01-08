@@ -23,9 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bill', function () {
-    return view('admin.bill.bill');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -39,6 +37,12 @@ Route::middleware('auth')->group(function () {
     Route::resource('jagga_darta', JaggadartaController::class);
     Route::resource('/mulyakan', MulyankanController::class);
     Route::resource('karasuli', KarasuliController::class);
+    Route::get("/personal-bivaran/load", [PerosnalDetailController::class, "loadDas"])->name("personalBiwaranLoad");
+    Route::post("/personal-bivaran/dates", [PerosnalDetailController::class, "loadDataBetweenDate"])->name("loadDataBetweenDate");
+    Route::get("/get-bill/{id}", [PerosnalDetailController::class, "getBill"])->name("getBill");
+    Route::get('/bill', function () {
+        return view('admin.bill.bill1');
+    })->name("bill1");
 });
 
 require __DIR__ . '/auth.php';

@@ -16,6 +16,11 @@
 </head>
 
 <body>
+    @php
+        $b = Session::get('msg');
+        $bill = $b['bill'];
+        $bills = $b['bills'];
+    @endphp
     <div class="container border ">
         <div class="header ">
             <div class="logo">
@@ -35,7 +40,6 @@
                 <p>rasid no : 123</p>
 
             </div>
-
             <div>
                 <p>karyalaya code num : 23456789 </p>
                 <p>aaya barsha : @php
