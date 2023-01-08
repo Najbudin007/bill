@@ -42,6 +42,7 @@ return new class extends Migration
             $table->string('nagad')->nullable();
             $table->string('firta')->nullable();
             $table->string('total')->nullable();
+            $table->string('created_by')->nullable();
             $table->timestamps();
         });
     }

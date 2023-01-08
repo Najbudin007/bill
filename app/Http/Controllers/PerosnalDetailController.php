@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\perosnalDetail;
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PerosnalDetailController extends Controller
@@ -76,10 +78,11 @@ class PerosnalDetailController extends Controller
         $data->total = $total;
         $data->dar_rate_srishak = $request->dar_rate_srishak;
         $data->kaifiyat1 = $request->kaifiyat1;
-        $data->prati_ekai_dar = $request->prati_ekai_dar;
-        $data->parimad = $request->parimad;
+        $data->prati_ekai_dar = $request->rate;
+        $data->parimad = $request->quantity;
         $data->kaifiyat = $request->kaifiyat;
         $data->nagad = $request->nagad;
+        $data->created_by = auth()->user()->id;
         $data->save();
         $bills = [];
         $bills["total"] = abs($total);
@@ -87,8 +90,11 @@ class PerosnalDetailController extends Controller
         $bills["kaifiyat1"] = $request->kaifiyat1;
         $bills["nagad"] = abs($request->nagad);
         $bills["sanket"] = $request->kar_data_sanket;
-        // dd($bill);
-        return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
+        $bills["created_at"] = $request->created_at;
+        $bills["created_by"] = auth()->user()->name;
+        return redirect()->route("getBill", $data->id);
+        // return redirect()->route("bill1")->with("msg", ["bill" => $bill, "bills" => $bills]);
+        // return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
     }
 
     /**
@@ -134,5 +140,50 @@ class PerosnalDetailController extends Controller
     public function destroy(perosnalDetail $perosnalDetail)
     {
         //
+    }
+    public function loadDas()
+    {
+        $datas = perosnalDetail::where("created_by", auth()->user()->id)->whereDate("created_at", Carbon::today())->get();
+        return view("admin.biwaran.index", ["datas" => $datas]);
+    }
+    public function loadDataBetweenDate(Request $request)
+    {
+        if ($request->start_date !== "" && $request->end_date !== "") {
+            $start_date = Carbon::parse(request()->start_date)->toDateTimeString();
+            $end_date = Carbon::parse(request()->end_date)->toDateTimeString();
+            $datas = perosnalDetail::where("created_by", auth()->user()->id)->whereBetween("created_at", [$start_date, $end_date])->get();
+            return view("admin.biwaran.index", ["datas" => $datas]);
+        }
+        return view("admin.biwaran.index");
+    }
+    public function getBill($id)
+    {
+        $data =  perosnalDetail::find($id);
+
+
+        $bill = [];
+        if ($data->prati_ekai_dar && $data->parimad) {
+            foreach ($data->prati_ekai_dar as $key => $first) {
+                if (isset($data->parimad[$key])) {
+                    $bill[$key]["rate"] = $first;
+                    $bill[$key]["quantity"] = $data->parimad[$key];
+                    $bill[$key]["kaifiyat"] = $data->kaifiyat[$key] ?? "null";
+                    $bill[$key]["dar_rate_srishak"] = $data->dar_rate_srishak[$key] ?? "null";
+                    $bill[$key]["total"] = $data->parimad[$key] * $first;
+                }
+            }
+        }
+
+        $firta = $data->firta;
+        $bills = [];
+        $bills["total"] = $data->total;
+        $bills["firta"] = $firta;
+        $bills["kaifiyat1"] = $data->kaifiyat1;
+        $bills["nagad"] = $data->nagad;
+        $bills["sanket"] = $data->kar_data_sanket;
+        $bills["created_at"] = $data->created_at;
+        $bills["created_by"] = User::find($data->created_by)->pluck("name");
+        // dd($bill);
+        return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
     }
 }
