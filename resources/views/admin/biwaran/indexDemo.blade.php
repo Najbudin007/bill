@@ -54,7 +54,7 @@
                     <th>नगद रकम</th>
                     <th>जम्मा रकम</th>
                     <th>काउन्टर</th>
-                    <th>सिफारिस नं</th>
+                    {{-- <th>सिफारिस नं</th> --}}
                     <th>कैफियत</th>
                   
                 </tr>
@@ -63,16 +63,17 @@
                         <tr>
                             <td><a href="{{ route('getBill', $data->id) }}"><button
                                         class="btn btn-sm btn-success">Bill</button></a></td>
+                            <td>{{ $key + 1 }}</td>          
                             <td>{{$data->bill_number}}</td>
                             <td>{{$data->date}}</td>
                             <td>{{$data->kar_data_sanket}}</td>
                             <td>{{$data->fullname}}</td>
                             <td>{{$data->municipality}}</td>
-                            <td>{{$data->nagad}}</td>
+                            <td>{{$data->total}}</td>
                             <td>{{$data->total}}</td>
                             <td>{{$data->counter}}</td>
-                            <td>{{$data->kaifiyat1}}</td>
-                            <td>{{$data->kaifiyat1}}</td>
+                            {{-- <td>asdas</td> --}}
+                            <td>{{$data->kaifiyat}}</td>
                         </tr>
                     @endforeach
                 @endif

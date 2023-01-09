@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-4">
                     <p>bujaune ko sahi</p>
-                    <p>name: {{ auth()->user()->name }}</p>
+                    <p>name: {{ $bills['created_by'] }}</p>
                 </div>
                 <div class="col-4">
                     <p>darja:</p>

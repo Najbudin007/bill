@@ -37,7 +37,6 @@ class PerosnalDetailController extends Controller
      */
     public function store(Request $request)
     {
-
         $data =  new perosnalDetail();
 
         $data->kar_ko_prakar = $request->kar_ko_prakar;
@@ -91,7 +90,7 @@ class PerosnalDetailController extends Controller
         $bills["nagad"] = abs($request->nagad);
         $bills["sanket"] = $request->kar_data_sanket;
         $bills["created_at"] = $request->created_at;
-        $bills["created_by"] = auth()->user()->name;
+        $bills["created_by"] = $data->created_by;
         return redirect()->route("getBill", $data->id);
         // return redirect()->route("bill1")->with("msg", ["bill" => $bill, "bills" => $bills]);
         // return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
@@ -182,7 +181,7 @@ class PerosnalDetailController extends Controller
         $bills["nagad"] = $data->nagad;
         $bills["sanket"] = $data->kar_data_sanket;
         $bills["created_at"] = $data->created_at;
-        $bills["created_by"] = User::find($data->created_by)->pluck("name");
+        $bills["created_by"] = User::find($data->created_by)->name;
         // dd($bill);
         return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
     }

@@ -50,7 +50,7 @@
 
                             <div class="inps">
                                 <label for="nname">कर्दाता सन्केत</label>
-                                <input type="text" name="kar_data_sanket" id="nname">
+                                <input type="number" name="kar_data_sanket" class="px-2" id="nname" value="{{random_int(0, 999999)}}" >
                             </div>
                             <div class="inps">
                                 <label for="nname" class="required-label">पुरा नाम</label>
