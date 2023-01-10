@@ -89,6 +89,7 @@ class PerosnalDetailController extends Controller
         $bills["kaifiyat1"] = $request->kaifiyat1;
         $bills["nagad"] = abs($request->nagad);
         $bills["sanket"] = $request->kar_data_sanket;
+        $bills["id"] = $data->id;
         $bills["created_at"] = $request->created_at;
         $bills["created_by"] = $data->created_by;
         return redirect()->route("getBill", $data->id);
@@ -181,6 +182,7 @@ class PerosnalDetailController extends Controller
         $bills["nagad"] = $data->nagad;
         $bills["sanket"] = $data->kar_data_sanket;
         $bills["created_at"] = $data->created_at;
+        $bills["id"] = $data->id;
         $bills["created_by"] = User::find($data->created_by)->name;
         // dd($bill);
         return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
