@@ -41,9 +41,12 @@
                                 <select id="" name="kar_ko_prakar">
                                     <option value="कृपया छान्नुहोस..." disabled selected>कृपया छान्नुहोस...</option>
                                     <option value="ADV - विज्ञापन कर">ADV - विज्ञापन कर </option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
+                                    <option value="ADV - वेव्साय कर">ADV - वेव्साय कर</option>
+                                    <option value="ADV - घर जग्गा"> ADV -घर जग्गा</option>
+                                    <option value="ADV - सम्पती कर">ADV - सम्पती कर</option>
+                                    <option value="ADV - अन्री कर">ADV - अन्री कर</option>
+                                    <option value="ADV - वाहल कर">ADV - वाहल कर</option>
+                                    <option value="ADV - वाहल कर">ADV - वाहल कर</option>
                                     <option value="थाहा नभएको र लागू नहुने">थाहा नभएको र लागू नहुने</option>
                                 </select>
                             </div>
@@ -116,7 +119,7 @@
                             </div>
                             <div class="inps">
                                 <label for="nname">रसिद न :</label>
-                                <input type="text" name="bill_number" id="nname">
+                                <input type="text" name="bill_number" id="nname"  value="{{random_int(0, 9999)}}" >
                             </div>
                             <div class="inps">
                                 <label for="nname" class="required-label">साहयक मोड्युल</label>
@@ -124,7 +127,7 @@
                             </div>
                         </div>
 
-                        <div class="d-flex mt-3 w-100">
+                        <div class="d-flex mt-3">
                             <div class="inps">
                                 <label for="nname">आ.रसिद न्</label>
                                 <input type="text" name="antarik_rashid_no" id="nname">
@@ -146,7 +149,11 @@
                                 <label for="nname" class="required-label">मिती</label>
                                 <input type="date" name="date" id="nname">
                             </div>
+                        </div>
 
+                        <div class="inps mt-3">
+                            <label for="nname" class="required-label">पान नम्बर:</label>
+                            <input type="text" name="" id="nname">
                         </div>
 
                         <div class="mt-2 px-1">
@@ -189,7 +196,7 @@
                         <th>दररेट शीर्षक</th>
                         <th>प्रति एकाई दर</th>
                         <th>परिमाण</th>
-                        {{-- <th>रकम</th> --}}
+                        <th>रकम</th>
                         <th>कैफियत</th>
                     </tr>
                     <tr>
@@ -205,7 +212,7 @@
                         </td>
                         <td><input type="number" value="1" name="rate[]"></td>
                         <td><input type="number" value="1" name="quantity[]"></td>
-                        {{-- <td><input type="text" value="1"></td> --}}
+                        <td><input type="text" value="1"></td>
                         <td><input type="text" value="1" name="kaifiyat[]"></td>
 
                     </tr>
@@ -298,7 +305,6 @@
                     <td><input type="number" value="1" name="quantity[]"></td>
                     {{-- <td><input type="text" value="1"></td> --}}
                     <td><input type="text" value="1" name="kaifiyat[]"></td>
-
                 </tr>
             `);
                     var rbtn = document.querySelectorAll('.delete-icon');
