@@ -17,9 +17,9 @@
 
 <body>
     <div class="container border ">
-        <div class="header ">
+        <div class="header mt-5">
             <div class="logo">
-                <img src="{{ asset('images/sar.png') }}" alt="">
+                <img src="{{ asset('images/sar.png') }}" style="height: 100px;width:100px;obect-fit:cover;" alt="">
             </div>
             <div class="center">
                 <p>इशनाथ नगरपालिका</p>
@@ -28,7 +28,7 @@
                 <p class="title">नगदी/प्रप्ती रसिद कर्यलया प्रती </p>
             </div>
         </div>
-        <div class="d-flex justify-content-between mt-4">
+        <div class="d-flex justify-content-between mt-5">
             <div>
                 <p>बिधुतिय करोबार संकेत नम्बर : 1234567890oijhgfe567esrdfg775567</p>
 
@@ -63,12 +63,12 @@
         <table class="table table-bordered mt-3">
             <tr>
                 <th>क्र.स </th>
-                <th style="width: 170px">संकेत नं :</th>
-                <th>विवरन </th>
+                <th style="width: 80px">संकेत नं :</th>
+                <th style="width: 180px">विवरन </th>
                 <th> बापत / प्रयोजन </th>
                 <th>रकम रु  </th>
                 <th style="width: 150px">प्रप्ती को मध्याम </th>
-                <th style="width: 150px">चेक वा अन्य नं :</th>
+                <th style="width: 70px;height:50px">चेक वा अन्य नं:</th>
             </tr>
             @foreach ($bill as $key => $bil)
                 <tr>
@@ -118,6 +118,12 @@
             </div>
         </div>
     </div>
+    <script>
+
+       
+          window.print();
+        
+            </script>
 </body>
 
 </html>
