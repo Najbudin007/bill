@@ -41,9 +41,15 @@
                                 <select id="" name="kar_ko_prakar">
                                     <option value="कृपया छान्नुहोस..." disabled selected>कृपया छान्नुहोस...</option>
                                     <option value="ADV - विज्ञापन कर">ADV - विज्ञापन कर </option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
+                                    <option value="कृपया छान्नुहोस..." disabled selected>कृपया छान्नुहोस...</option>
+                                    <option value="ADV - विज्ञापन कर">ADV - विज्ञापन कर </option>
+                                    <option value="ADV - वेव्साय कर">ADV - वेव्साय कर</option>
+                                    <option value="ADV - घर जग्गा"> ADV -घर जग्गा</option>
+                                    <option value="ADV - सम्पती कर">ADV - सम्पती कर</option>
+                                    <option value="ADV - अन्री कर">ADV - अन्री कर</option>
+                                    <option value="ADV - वाहल कर">ADV - वाहल कर</option>
+                                    <option value="ADV - वाहल कर">ADV - वाहल कर</option>
+                                    <option value="थाहा नभएको र लागू नहुने">थाहा नभएको र लागू नहुने</option>
                                     <option value="थाहा नभएको र लागू नहुने">थाहा नभएको र लागू नहुने</option>
                                 </select>
                             </div>
@@ -117,7 +123,7 @@
                             </div>
                             <div class="inps">
                                 <label for="nname">रसिद न :</label>
-                                <input type="text" name="bill_number" id="nname">
+                                <input type="text" name="bill_number" value="{{random_int(0, 9999)}}" id="nname">
                             </div>
                             <div class="inps">
                                 <label for="nname" class="required-label">साहयक मोड्युल</label>
@@ -191,7 +197,7 @@
                         <th>दररेट शीर्षक</th>
                         <th>प्रति एकाई दर</th>
                         <th>परिमाण</th>
-                        {{-- <th>रकम</th> --}}
+                        <th>रकम</th>
                         <th>कैफियत</th>
                     </tr>
                     <tr>
