@@ -84,9 +84,9 @@ center{
 
 }
 .box1{
-    width: 80px;
+    width:100px;
 }
-.box2{width: 80px; min-height: 100%;}
+.box2{width: 100px; min-height: 100%;}
 .box3{width: 82.5px;}
 .box4{width: 80px;}
 .box5{width: 80px;}

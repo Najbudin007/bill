@@ -11,6 +11,7 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/css658d.css') }}" rel="stylesheet" />
     <link href="{{ asset('script/jquery-2.2.3.min.js') }}" rel="stylesheet" />
+    
 </head>
 
 <body>
