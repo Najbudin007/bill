@@ -23,7 +23,6 @@
             </div>
             <div class="center">
                 <p>इशनाथ नगरपालिका</p>
-                <p>इशनाथ नगरपालिका</p>
                 <p>रौतहट, मधेश प्रदेश, नेपाल</p>
                 <p class="title">नगदी/प्रप्ती रसिद कर्यलया प्रती </p>
             </div>
@@ -118,6 +117,10 @@
             </div>
         </div>
     </div>
+
+    <script>
+        window.print();
+    </script>
 </body>
 
 </html>

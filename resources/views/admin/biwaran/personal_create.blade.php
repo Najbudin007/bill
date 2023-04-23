@@ -50,7 +50,8 @@
 
                             <div class="inps">
                                 <label for="nname">कर्दाता सन्केत</label>
-                                <input type="number" name="kar_data_sanket" class="px-2" id="nname" value="{{random_int(0, 999999)}}" >
+                                <input type="number" name="kar_data_sanket" class="px-2" id="nname"
+                                    value="{{ random_int(0, 999999) }}">
                             </div>
                             <div class="inps">
                                 <label for="nname" class="required-label">पुरा नाम</label>
@@ -144,7 +145,8 @@
                             </div>
                             <div class="inps">
                                 <label for="nname" class="required-label">मिती</label>
-                                <input type="date" name="date" id="nname">
+                                <input type="text" name="date" id="nepali-datepicker"
+                                    placeholder="मिती छान्नुहोस...">
                             </div>
 
                         </div>
@@ -275,7 +277,12 @@
 
         </div>
         <form>
-
+            <script type="text/javascript">
+                window.onload = function() {
+                    var mainInput = document.getElementById("nepali-datepicker");
+                    mainInput.nepaliDatePicker();
+                };
+            </script>
             <script>
                 var btn = document.getElementById("button");
                 var table = document.getElementById("table");
