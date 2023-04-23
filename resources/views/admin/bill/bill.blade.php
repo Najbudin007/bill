@@ -17,17 +17,21 @@
 
 <body>
     <div class="container border ">
-        <div class="header ">
+        <div class="header mt-5">
             <div class="logo">
-                <img src="{{ asset('images/sar.png') }}" alt="">
+                <img src="{{ asset('images/sar.png') }}" style="height: 100px;width:100px;obect-fit:cover;" alt="">
             </div>
             <div class="center">
                 <p>इशनाथ नगरपालिका</p>
+<<<<<<< HEAD
+=======
+                <p>नगर कार्यपालिका को कार्यालय </p>
+>>>>>>> 81d96866a80cf3a6a2835014498cc41294f89ca4
                 <p>रौतहट, मधेश प्रदेश, नेपाल</p>
-                <p class="title">नगदी/प्रप्ती रसिद कर्यलया प्रती </p>
+                <p class="title">नगदी/प्रप्ती रसिद कार्यालय प्रती </p>
             </div>
         </div>
-        <div class="d-flex justify-content-between mt-4">
+        <div class="d-flex justify-content-between mt-5">
             <div>
                 <p>बिधुतिय करोबार संकेत नम्बर : 1234567890oijhgfe567esrdfg775567</p>
 
@@ -62,12 +66,12 @@
         <table class="table table-bordered mt-3">
             <tr>
                 <th>क्र.स </th>
-                <th style="width: 170px">संकेत नं :</th>
-                <th>विवरन </th>
+                <th style="width: 80px">संकेत नं :</th>
+                <th style="width: 180px">विवरन </th>
                 <th> बापत / प्रयोजन </th>
                 <th>रकम रु  </th>
                 <th style="width: 150px">प्रप्ती को मध्याम </th>
-                <th style="width: 150px">चेक वा अन्य नं :</th>
+                <th style="width: 70px;height:50px">चेक वा अन्य नं:</th>
             </tr>
             @foreach ($bill as $key => $bil)
                 <tr>
@@ -99,7 +103,7 @@
             <div class="row">
                 <div class="col-4">
                     <p>सही: </p>
-                    <p>इश्थानिया लेखा नं :</p>
+                    <p>स्थानिय लेखा नं :</p>
                     <p>प्रीन्ट मिती : @php
 
                         echo $date['date'] . ' ' . $date['nmonth'] . ' ' . $date['year'];
@@ -111,16 +115,25 @@
                 </div>
                 <div class="col-4">
                     <p>दर्जा :</p>
-                    <p>दर्जा :कर्मचारी सांकेत नं :</p>
+                    <p>कर्मचारी सांकेत नं :</p>
                     <p>प्रीन्ट गर्ने को नाम : {{ $bills['created_by'] }}</p>
                 </div>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
     <script>
         window.print();
     </script>
+=======
+    <script>
+
+       
+          window.print();
+        
+            </script>
+>>>>>>> 81d96866a80cf3a6a2835014498cc41294f89ca4
 </body>
 
 </html>

@@ -11,20 +11,21 @@
                 <div class="col-md-10">
                     <div class="d-flex">
                         <div class="inps mr-3">
-                            <label for="nname" class="required-label">Name:</label>
+                            <label for="nname" class="required-label">नाम:</label>
                             <input type="text" id="nname" class="px-2" value="{{ auth()->user()->name }}" disabled>
                         </div>
 
                         <div class="inps mr-3">
-                            <label for="nname">Start Date:</label>
-                            <input type="date" id="nname" name="start_date">
+                            <label for="nname">सुरु मिती:</label>
+                            <input type="text"  id="nepali-datepicker" name="start_date" placeholder="मिती छान्नुहोस...">
+                          
                         </div>
 
                         <div class="inps mr-3">
-                            <label for="nname">End Date:</label>
-                            <input type="date" id="nname" name="end_date">
+                            <label for="nname">समाप्त मिती :</label>
+                            <input type="text"  id="nepali-datepicker1" name="end_date" placeholder="मिती छान्नुहोस...">
                         </div>
-                        <button class=" btn btn-sm btn-success">Submit</button>
+                        <button class=" btn btn-sm btn-success">सुरक्षित गर्न्हुस </button>
                     </div>
                 </div>
                 <div class="col-md-2"></div>
@@ -79,4 +80,17 @@
             </table>
         </div>
     </div>
+
+    @section('scripts')
+    <script type="text/javascript">
+        window.onload = function() {
+            var mainInput = document.getElementById("nepali-datepicker");
+            mainInput.nepaliDatePicker();
+        };
+        window.onload = function() {
+            var mainInput = document.getElementById("nepali-datepicker1");
+            mainInput.nepaliDatePicker();
+        };
+    </script>
+    @endsection
 @endsection

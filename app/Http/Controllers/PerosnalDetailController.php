@@ -26,7 +26,9 @@ class PerosnalDetailController extends Controller
      */
     public function create()
     {
-        return view('admin.biwaran.personal_create');
+        $perosnalDetail= PerosnalDetail::all();
+        return view('admin.biwaran.personal_create', compact('perosnalDetail'));
+
     }
 
     /**
@@ -93,8 +95,8 @@ class PerosnalDetailController extends Controller
         $bills["created_at"] = $request->created_at;
         $bills["created_by"] = $data->created_by;
         return redirect()->route("getBill", $data->id);
-        // return redirect()->route("bill1")->with("msg", ["bill" => $bill, "bills" => $bills]);
-        // return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
+         return redirect()->route("bill1")->with("msg", ["bill" => $bill, "bills" => $bills]);
+        return view("admin.bill.bill1", ["bill" => $bill, "bills" => $bills]);
     }
 
     /**
@@ -156,6 +158,7 @@ class PerosnalDetailController extends Controller
         }
         return view("admin.biwaran.index");
     }
+
     public function getBill($id)
     {
         $data =  perosnalDetail::find($id);
@@ -185,6 +188,6 @@ class PerosnalDetailController extends Controller
         $bills["id"] = $data->id;
         $bills["created_by"] = User::find($data->created_by)->name;
         // dd($bill);
-        return view("admin.bill.bill", ["bill" => $bill, "bills" => $bills]);
+        return view("admin.bill.bill1", ["bill" => $bill, "bills" => $bills]);
     }
 }
