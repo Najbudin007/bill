@@ -23,10 +23,7 @@
             </div>
             <div class="center">
                 <p>इशनाथ नगरपालिका</p>
-<<<<<<< HEAD
-=======
                 <p>नगर कार्यपालिका को कार्यालय </p>
->>>>>>> 81d96866a80cf3a6a2835014498cc41294f89ca4
                 <p>रौतहट, मधेश प्रदेश, नेपाल</p>
                 <p class="title">नगदी/प्रप्ती रसिद कार्यालय प्रती </p>
             </div>
@@ -121,19 +118,12 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-
-    <script>
-        window.print();
-    </script>
-=======
     <script>
 
        
           window.print();
         
             </script>
->>>>>>> 81d96866a80cf3a6a2835014498cc41294f89ca4
 </body>
 
 </html>
