@@ -687,7 +687,7 @@
                     </td>
                     <td><input type="number" value="1" name="rate[]"></td>
                     <td><input type="number" value="1" name="quantity[]"></td>
-                    <td><input type="text" value="1"></td> 
+                    <td><input type="text" id="result" name="result" readonly></td>
                     <td><input type="text" value="1" name="kaifiyat[]"></td>
 
                 </tr>

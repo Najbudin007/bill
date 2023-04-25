@@ -46,6 +46,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/bill', function () {
         return view('admin.bill');                
     })->name("bill");
+
+        // user
+        Route::group(["middleware" => "admin"], function () {
+            Route::get("/create-user", [UserController::class, "create"])->name("createUser");
+            Route::get("/edit-user/{id}", [UserController::class, "edit"])->name("editUser");
+            Route::patch("/update-user/{id}", [UserController::class, "update"])->name("updateUser");
+            Route::post("/store-user", [UserController::class, "store"])->name("storeUser");
+            Route::get("/delete-user/{id}", [UserController::class, "delete"])->name("deleteUser");
+            Route::get("/user", [UserController::class, "index"])->name("allUser");
+        });
 });
 
 require __DIR__ . '/auth.php';

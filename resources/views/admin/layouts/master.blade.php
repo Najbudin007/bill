@@ -15,13 +15,10 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/css/nepali.datepicker.v4.0.min.css"
         rel="stylesheet" type="text/css" />
-<<<<<<< HEAD
-=======
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" />
 
 
->>>>>>> 81d96866a80cf3a6a2835014498cc41294f89ca4
 </head>
 
 <body>
@@ -98,6 +95,17 @@
                             <li><a href="{{ route('personalBivaran.index') }}">करदाताको विवरण</a></li>
                         </ul>
                     </li>
+
+                    @if (auth()->user()->role == 'super_admin')
+                    <li>
+                        <i class="ri-printer-line"></i>
+                        <ul class="inner-ul">
+                            <li><a href="{{ route('allUser') }}">User</a></li>
+
+
+                        </ul>
+                    </li>
+                @endif
                     <li>
                         <i class="ri-bookmark-line"></i>
                         {{-- <ul class="inner-ul">
@@ -121,20 +129,16 @@
         </div>
     </div>
     @yield('scripts')
-<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"
         integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
     <script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v4.0.min.js"
         type="text/javascript"></script>
-=======
 
     <script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v4.0.min.js"
         type="text/javascript"></script>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
->>>>>>> 81d96866a80cf3a6a2835014498cc41294f89ca4
-
 </body>
 
 </html>
